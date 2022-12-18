@@ -11,13 +11,14 @@ https://www.dropbox.com/s/cr6nry8apeizlvd/DejectedSouls_Demo.zip?dl=0
 ## Project Development Environment
 
 Software for Development: Android Studio 2020.3.1\
-Framework: Flutter V2.0.6\
-Programming Language: Dart with Flutter for Application, PHP for API\
-Development Device OS: Windows 10 / MacOS Catalina
+Programming Language: Java\
+Development Device OS: Windows 10
 
 ## ScreenShots
-<img src="https://github.com/TommySinPolyU/SimpleEducationApps/blob/main/screenshots/Home.png" width="400">
-
+<img src="https://github.com/TommySinPolyU/DejectedSoul/blob/main/screenshots/DS_BattleMode.png" width="400">
+<img src="https://github.com/TommySinPolyU/DejectedSoul/blob/main/screenshots/DS_Equipment.png" width="400">
+<img src="https://github.com/TommySinPolyU/DejectedSoul/blob/main/screenshots/DS_Skill.png" width="400">
+<img src="https://github.com/TommySinPolyU/DejectedSoul/blob/main/screenshots/DS_Battle.png" width="400">
 
 ## Credits
 
