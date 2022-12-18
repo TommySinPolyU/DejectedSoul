@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlackwithOpancity">
+
+    <TextView
+        android:id="@+id/tv_loginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Sign Up Account"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tv_loginTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_gamename"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_vertical|center|fill"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:gravity="center|fill"
+                android:text="Game Name: "
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_loginTitle" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_gamename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|fill"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="fill"
+            android:hint="Game Name\n[4 ~ 24 characters(Accept Chinese)]"
+            android:inputType="textPersonName"
+            android:maxLength="24"
+            android:tag="0"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_requiement_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="The name will display on the game screen. "
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_IDLable"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_vertical|center|fill"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0.565"
+                android:gravity="center|fill"
+                android:text="ID: "
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_loginTitle" />
+
+            <EditText
+                android:id="@+id/et_LoginID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|fill"
+                android:layout_weight="0.425"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                android:ems="10"
+                android:gravity="fill"
+                android:hint="ID\n[8 ~ 16 character (Only Accept Alphabets)]"
+                android:inputType="textNoSuggestions|textCapSentences"
+                android:maxLength="16"
+                android:tag="0"
+                android:textColor="@android:color/background_light"
+                android:textColorHint="@android:color/background_light"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_requirement_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="ID for login to your account."
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_PwLable"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_vertical|center|fill"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0.55"
+                android:gravity="center|fill"
+                android:text="PW:"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_loginTitle" />
+
+            <EditText
+                android:id="@+id/et_LoginPW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|fill"
+                android:layout_weight="0.45"
+                android:ems="10"
+                android:gravity="fill"
+                android:hint="Password (8 ~ 24 character)"
+                android:inputType="textPassword"
+                android:maxLength="24"
+                android:tag="0"
+                android:textColor="@android:color/background_light"
+                android:textColorHint="@android:color/background_light"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_requirement_pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.55"
+            android:text="Password for login to your account."
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_Reminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="Please Do not input any personal data in the register form"
+            android:textColor="@color/colorRed"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_signupConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:text="Register" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

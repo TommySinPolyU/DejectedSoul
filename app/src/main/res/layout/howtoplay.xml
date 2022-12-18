@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_howtoplayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="How To Play"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_howtoplayWarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_howtoplayTitle"
+            android:layout_alignParentTop="false"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="All Tutorials are video loaded from internet.\nPlease watch at stable wifi Network to avoid the extra fee of data."
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+        <ScrollView
+            android:id="@+id/sv_howtoplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_h2pClose"
+            android:layout_below="@+id/tv_howtoplayWarning"
+            android:layout_alignParentTop="false"
+            android:layout_centerInParent="true"
+            android:scrollbarSize="10dp"
+            android:scrollbarStyle="insideOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/LoginTutLayour"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_playLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/frame1"
+                        android:text="Login Tutorial" />
+
+                    <TextView
+                        android:id="@+id/tv_h2pLoginTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="If you login success, the ID and PW will store in local save data. The game will auto login when you hava account data in local save data."
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/RegisterTutLayour"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_playRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/frame1"
+                        android:text="Register Tutorial" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/PlayOfflineModeTutLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_playOfflineTut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/frame1"
+                        android:text="Offline Mode Tutorial" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/MovementTutLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_playMovement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/frame1"
+                        android:text="Character Control Tutorial" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/EquipmentTutLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_playEquipment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/frame1"
+                        android:text="Equipment and Enhancement Tutorial" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/SkillTutLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_playSkills"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/frame1"
+                        android:text="Learn Skills Tutorial" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/SaveandLoadTutLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_playSaveandLoad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/frame1"
+                        android:text="Save and Load Game Tutorial" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ResetGameTutLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_playReset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/frame1"
+                        android:text="Reset Game Tutorial" />
+
+                    <TextView
+                        android:id="@+id/tv_h2pLoginTitle3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="Reset the game will lost all offline game data and the account ID and PW.You need to login again after reset game."
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_h2pClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:text="Close" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

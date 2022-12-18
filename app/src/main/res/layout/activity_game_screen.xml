@@ -1,0 +1,1354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameBackStageUI">
+
+    <LinearLayout
+        android:id="@+id/playerInfoUI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/characterInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_playerName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="PlayerName"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_Lv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:background="@android:color/transparent"
+                android:scaleY="1.5"
+                android:src="@drawable/lvicon" />
+
+            <TextView
+                android:id="@+id/tv_LV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingTop="3dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="0dp"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_Exp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:src="@drawable/exp" />
+
+            <ProgressBar
+                android:id="@+id/expbar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/iv_Exp2"
+                android:indeterminate="false"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:progressTint="#6aeb88"
+                android:scaleY="4" />
+
+            <TextView
+                android:id="@+id/expText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/expbar"
+                android:layout_alignTop="@+id/expbar"
+                android:layout_alignRight="@+id/expbar"
+                android:layout_alignBottom="@+id/expbar"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/materialsInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/moneyDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0">
+
+                <ImageView
+                    android:id="@+id/iv_Money2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_span="0"
+                    android:layout_weight="0"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:src="@drawable/coin" />
+
+                <TextView
+                    android:id="@+id/tv_Money2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/iv_Money2"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stageTopUI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerInfoUI">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_StageMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/iv_StageMoney"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/buttonLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="0dp"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <ImageButton
+                    android:id="@+id/btn_Pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_span="0"
+                    android:layout_weight="0"
+                    android:background="@drawable/iconbg"
+                    android:padding="5dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:scaleType="center"
+                    android:src="@drawable/pause" />
+
+                <ImageButton
+                    android:id="@+id/btn_runaway"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginEnd="-1dp"
+                    android:adjustViewBounds="false"
+                    android:background="@drawable/iconbg"
+                    android:padding="5dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/escape" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_Stage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/iv_StageMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_Stage"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:src="@drawable/coin" />
+
+            <ImageView
+                android:id="@+id/iv_StageExp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_StageMoney"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:src="@drawable/exp" />
+
+            <TextView
+                android:id="@+id/tv_StageExp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:layout_span="0"
+                android:layout_toRightOf="@+id/iv_StageExp"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:paddingRight="0dp"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/enemyInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/enemyStatusIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0">
+
+                        <TextView
+                            android:id="@+id/tv_enemy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="0dp"
+                            android:layout_weight="0"
+                            android:gravity="center" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="false"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="false"
+                            android:layout_gravity="right"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/iv_poisionicon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/iv_undeadicon"
+                                android:src="@drawable/poisonicon"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/iv_undeadicon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/iv_bossicon"
+                                android:src="@drawable/undeadicon"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/iv_bossicon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/bossicon"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iv_enemyhpicon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/hpicon" />
+
+                        <ProgressBar
+                            android:id="@+id/enemyhpBar"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_toRightOf="@+id/iv_enemyhpicon"
+                            android:indeterminate="false"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="15dp"
+                            android:paddingBottom="5dp"
+                            android:progressTint="#ff0000"
+                            android:scaleY="4" />
+
+                        <TextView
+                            android:id="@+id/enemyhpText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/enemyhpBar"
+                            android:layout_alignTop="@+id/enemyhpBar"
+                            android:layout_alignRight="@+id/enemyhpBar"
+                            android:layout_alignBottom="@+id/enemyhpBar"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="0"
+                            android:gravity="center"
+                            android:text="Text"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/charStatusUI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stageTopUI">
+
+        <LinearLayout
+            android:id="@+id/hpBarContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_span="5"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_hpicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hpicon" />
+
+                <ProgressBar
+                    android:id="@+id/hpBar"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_span="1"
+                    android:layout_toRightOf="@+id/iv_hpicon"
+                    android:layout_weight="1"
+                    android:indeterminate="false"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp"
+                    android:progressTint="#ff0000"
+                    android:scaleY="4" />
+
+                <TextView
+                    android:id="@+id/hpText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/hpBar"
+                    android:layout_alignLeft="@+id/hpBar"
+                    android:layout_alignRight="@+id/hpBar"
+                    android:layout_alignTop="@+id/hpBar"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="TextView"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mpBarContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_span="5"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_mpicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mpicon" />
+
+                <ProgressBar
+                    android:id="@+id/mpBar"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_span="1"
+                    android:layout_toRightOf="@+id/iv_mpicon"
+                    android:layout_weight="1"
+                    android:indeterminate="false"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp"
+                    android:progressTint="#0000ff"
+                    android:scaleY="4" />
+
+                <TextView
+                    android:id="@+id/mpText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/mpBar"
+                    android:layout_alignLeft="@+id/mpBar"
+                    android:layout_alignRight="@+id/mpBar"
+                    android:layout_alignTop="@+id/mpBar"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:paddingBottom="0dp"
+                    android:text="TextView"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/stageScreencontainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/charStatusUI">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/menuUiContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/uibottomcontainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerInfoUI">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/SettingMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_SettingMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/frame2"
+                    android:gravity="center"
+                    android:text="Setting"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="false"
+                        android:layout_alignParentRight="false"
+                        android:layout_alignParentBottom="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/iconbg"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logout" />
+
+                    <Button
+                        android:id="@+id/btn_logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@+id/iv_logout"
+                        android:background="@drawable/frame1"
+                        android:text="Logout"
+                        android:textColor="@color/colorDark"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/saveGame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/icon_savegame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="false"
+                        android:layout_alignParentRight="false"
+                        android:layout_alignParentBottom="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/saveicon" />
+
+                    <Button
+                        android:id="@+id/btn_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@+id/icon_savegame"
+                        android:background="@drawable/frame1"
+                        android:text="Save Game"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/abnormalcharacterreset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/icon_resetCharacter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="false"
+                        android:layout_alignParentRight="false"
+                        android:layout_alignParentBottom="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/abnormalcharacter" />
+
+                    <Button
+                        android:id="@+id/btn_resetCharacter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@+id/icon_resetCharacter"
+                        android:background="@drawable/frame1"
+                        android:text="Solve Abnormal Status"
+                        android:textColor="@color/colorRed"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/resetGameData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/icon_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="false"
+                        android:layout_alignParentRight="false"
+                        android:layout_alignParentBottom="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/restarticon" />
+
+                    <Button
+                        android:id="@+id/btn_reset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@+id/icon_reset"
+                        android:background="@drawable/frame1"
+                        android:text="Reset Game"
+                        android:textColor="@color/colorRed"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/returnToMainMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_ReturntoMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="false"
+                        android:layout_alignParentRight="false"
+                        android:layout_alignParentBottom="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/menu" />
+
+                    <Button
+                        android:id="@+id/btn_returntomenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@+id/iv_ReturntoMenu"
+                        android:background="@drawable/frame1"
+                        android:text="Return To Menu"
+                        android:textColor="@color/colorDark"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/endlessChallengeDifficultyMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_DifficultyMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginEnd="-8dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="0.9"
+                        android:background="@drawable/frame2"
+                        android:gravity="center"
+                        android:text="Difficulty"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/btn_EndlessBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="false"
+                        android:layout_centerVertical="false"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="0.1"
+                        android:background="@android:drawable/screen_background_light_transparent"
+                        android:src="@drawable/back"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <ScrollView
+                    android:id="@+id/scrollView_DifficultySelection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbarSize="10dp"
+                    android:scrollbarStyle="insideOverlay">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btn_Easy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/frame1"
+                            android:text="Easy" />
+
+                        <Button
+                            android:id="@+id/btn_Normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/frame1"
+                            android:text="Normal" />
+
+                        <Button
+                            android:id="@+id/btn_Hard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/frame1"
+                            android:text="Hard" />
+
+                        <Button
+                            android:id="@+id/btn_Hell"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/frame1"
+                            android:text="Hell" />
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BattleMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_BattleModeMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/frame2"
+                    android:gravity="center"
+                    android:text="Battle Mode Selection"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_EndlessChallenge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/frame1"
+                    android:text="Endless Challenge" />
+
+                <Button
+                    android:id="@+id/btn_BossChallenge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/frame1"
+                    android:text="Boss Challenge" />
+
+                <Button
+                    android:id="@+id/btn_TimeAttack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/frame1"
+                    android:text="Time Attack"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BossChallengeSelectionMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_BossMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="0.9"
+                        android:background="@drawable/frame2"
+                        android:gravity="center"
+                        android:text="Boss Challenge"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/btn_BossBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="0.1"
+                        android:background="@android:drawable/screen_background_light_transparent"
+                        android:src="@drawable/back"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <ScrollView
+                    android:id="@+id/scrollView_BossSelection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbarSize="10dp"
+                    android:scrollbarStyle="insideOverlay">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_DarkSlime"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/iv_DarkSlime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="40dp"
+                                android:src="@drawable/darkelement" />
+
+                            <Button
+                                android:id="@+id/btn_DarkSlime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="40dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_toRightOf="@+id/iv_DarkSlime"
+                                android:background="@drawable/frame1"
+                                android:text="Dark Slime King" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_ForestSlime"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/iv_ForestSlime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="40dp"
+                                android:src="@drawable/forestelement" />
+
+                            <Button
+                                android:id="@+id/btn_ForestSlime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="40dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_toRightOf="@+id/iv_ForestSlime"
+                                android:background="@drawable/frame1"
+                                android:text="Forest Slime King" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_WaterSlime"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/iv_WaterSlime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="40dp"
+                                android:src="@drawable/bluefireelement" />
+
+                            <Button
+                                android:id="@+id/btn_WaterSlime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="40dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_toRightOf="@+id/iv_WaterSlime"
+                                android:background="@drawable/frame1"
+                                android:text="Water Slime King" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_FireSlime"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/iv_FireSlime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="40dp"
+                                android:src="@drawable/fireballelement" />
+
+                            <Button
+                                android:id="@+id/btn_FireSlime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="40dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_toRightOf="@+id/iv_FireSlime"
+                                android:background="@drawable/frame1"
+                                android:text="Fire Slime King" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_Odin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/iv_OdinExp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="20dp"
+                                android:background="@drawable/iconbg"
+                                android:src="@drawable/exp" />
+
+                            <ImageView
+                                android:id="@+id/iv_OdinMoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="false"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="0dp"
+                                android:layout_toRightOf="@+id/iv_OdinExp"
+                                android:background="@drawable/iconbg"
+                                android:src="@drawable/coin" />
+
+                            <Button
+                                android:id="@+id/btn_ODIN"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="40dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_toRightOf="@+id/iv_OdinMoney"
+                                android:background="@drawable/frame1"
+                                android:text="Odin" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/loadingBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/loadingBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1">
+
+            <ProgressBar
+                android:id="@+id/loadingBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="0"
+                android:layout_weight="0"
+                android:progressTint="#da9f6f"
+                android:scaleY="8"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/barPercentage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/loadingBar"
+                android:layout_alignLeft="@+id/loadingBar"
+                android:layout_alignRight="@+id/loadingBar"
+                android:layout_alignTop="@+id/loadingBar"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="TextView"
+                android:visibility="invisible"
+                app:autoSizeMaxTextSize="48dp"
+                app:autoSizeMinTextSize="18dp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/uibottomcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/battleBtnContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginLeft="0dp"
+                android:layout_weight=".2"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_battle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0"
+                    android:adjustViewBounds="false"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/battleicon" />
+
+                <TextView
+                    android:id="@+id/tv_battle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Battle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/charInfoBtnContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginLeft="0dp"
+                android:layout_weight=".2"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_charInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0"
+                    android:adjustViewBounds="false"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/charinfo" />
+
+                <TextView
+                    android:id="@+id/tv_charInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Character" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/equipmentBtnContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginLeft="0dp"
+                android:layout_weight=".2"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_Equipment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0"
+                    android:adjustViewBounds="false"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bulleticon" />
+
+                <TextView
+                    android:id="@+id/tv_equipment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Equipment" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/skillBtnContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginLeft="0dp"
+                android:layout_weight=".2"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_Skill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0"
+                    android:adjustViewBounds="false"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/skillicon" />
+
+                <TextView
+                    android:id="@+id/tv_skill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Skills" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settingBtnContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginLeft="0dp"
+                android:layout_weight=".2"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="false"
+                    android:background="@drawable/iconbg"
+                    android:src="@drawable/setting" />
+
+                <TextView
+                    android:id="@+id/tv_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Setting" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

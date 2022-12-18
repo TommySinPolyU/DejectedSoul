@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlackwithOpancity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Character Info"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/hpContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/tv_hp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/iv_hp"
+                android:text="TextView"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_hp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/hpicon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hprecoveryContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="597dp">
+
+            <ImageView
+                android:id="@+id/iv_hprecovery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/hprecoveryvalueup" />
+
+            <TextView
+                android:id="@+id/tv_hprecovery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/iv_hprecovery"
+                android:layout_weight=".8"
+                android:text="TextView"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mpContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/tv_mp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/iv_mp"
+                android:layout_weight=".8"
+                android:text="TextView"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_mp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/mpicon" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/mprecoveryContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/tv_mpcovery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/iv_mprecovey"
+                android:layout_weight=".8"
+                android:text="TextView"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_mprecovey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/mprecoveryvalueup" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/atkContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/iv_atk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/atkicon" />
+
+            <TextView
+                android:id="@+id/tv_atk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/iv_atk"
+                android:layout_weight=".8"
+                android:text="TextView"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/atkspeedContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/tv_atkspeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/iv_atkspeed"
+                android:layout_weight=".8"
+                android:text="TextView"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_atkspeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/attackspeedicon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/movespeedContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_movespeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/iv_movespeedicon"
+                android:layout_weight=".8"
+                android:text="TextView"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_movespeedicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/movementspeedup" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
