@@ -1,6 +1,6 @@
 # DejectedSoul
 
-This is a project originally developed for School Assignment which about E-business\
+This is a project originally developed for School Assignment which about Mobile Game Development\
 Now, some relevant source codes are open for reference,\
 including system source codes, but excluding the database structure.\
 **This project is now closed, and I will no longer develop and maintain this project.
